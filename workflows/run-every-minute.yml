@@ -18,3 +18,9 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run your script
         run: python main.py  # Replace 'main.py' with your script's actual name
+        env:
+          API_ID: ${{ secrets.API_ID }}
+          API_HASH: ${{ secrets.API_HASH }}
+          SOURCE_CHANNEL: ${{ secrets.SOURCE_CHANNEL }}
+          TARGET_CHANNEL: ${{ secrets.TARGET_CHANNEL }}
+          SESSION_STRING: ${{ secrets.SESSION_STRING }}
